@@ -28,7 +28,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
 
 "SELECT Projects.title, SUM(Pledges.amount) FROM Projects  
   LEFT JOIN pledges ON Projects.id = Pledges.project_id 
-  WHERE Pledges.amount > Projects.funding_goal
+  WHERE Pledges.amount => Projects.funding_goal
 "
 
   
